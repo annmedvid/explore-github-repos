@@ -82,8 +82,6 @@ function* fetchOwnerRepo(action) {
             call(receiveRepoPulls, action.payload)
         ])
 
-        console.log(repo)
-
         yield put(getOwnerRepoSuccess({repo, contributors, languages, pulls}))
     } catch (e) {
         yield put(getOwnerRepoFailed())

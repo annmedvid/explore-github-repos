@@ -6,7 +6,7 @@ import getDate from '../../utils/getDate'
 class PRsTable extends React.PureComponent {
     @injectProps
     render({prs}) {
-        if (!Object.keys(prs).length) {
+        if (!prs || !Object.keys(prs).length) {
             return null
         }
 

@@ -46,11 +46,13 @@ const reducerMap = {
         error: true
     }),
     [NEXT_REPOS_SUCCESS]: (state, data) => {
+        const {ownerInfo} = state
         const {repos, links} = data
         const parsedLinks = parseLinkHeader(links)
 
         return {
             ...INITIAL_STATE,
+            ownerInfo,
             repos: [...state.repos, ...repos],
             links: parsedLinks
         }

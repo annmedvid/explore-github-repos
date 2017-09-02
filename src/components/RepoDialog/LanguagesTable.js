@@ -6,7 +6,7 @@ import transformAmount from '../../utils/transformAmount'
 class LanguagesTable extends React.PureComponent {
     @injectProps
     render({languages}) {
-        if (!Object.keys(languages).length) {
+        if (!languages || !Object.keys(languages).length) {
             return null
         }
 

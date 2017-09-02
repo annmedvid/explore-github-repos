@@ -29,6 +29,9 @@ const filterMap = {
         return repos
     },
     particularLang: (repos, value, key) => {
+        if (value === 'not defined') {
+            return _.filter(repos, [params[key], null])
+        }
         if (value === 'all') return repos
 		return _.filter(repos, [params[key], value])
     }

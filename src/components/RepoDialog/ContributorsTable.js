@@ -6,7 +6,7 @@ import transformAmount from '../../utils/transformAmount'
 class ContributorsTable extends React.PureComponent {
     @injectProps
     render({contributors}) {
-        if (!Object.keys(contributors).length) {
+        if (!contributors || !Object.keys(contributors).length) {
             return null
         }
 
