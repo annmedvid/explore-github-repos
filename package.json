@@ -1,0 +1,29 @@
+{
+    "name": "explore-github-repos",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "axios": "^0.16.2",
+        "lodash": "^4.17.4",
+        "react": "^15.6.1",
+        "react-dom": "^15.6.1",
+        "react-onclickoutside": "^6.5.0",
+        "react-redux": "^5.0.5",
+        "react-router-dom": "^4.1.1",
+        "react-tooltip": "^3.3.0",
+        "redux": "^3.7.1",
+        "redux-create": "^1.0.9",
+        "redux-devtools-extension": "^2.13.2",
+        "redux-saga": "^0.15.4",
+        "svg-sprite-loader": "^3.0.10"
+    },
+    "devDependencies": {
+        "custom-react-scripts": "0.0.23"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test --env=jsdom",
+        "eject": "react-scripts eject"
+    }
+}
