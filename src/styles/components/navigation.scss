@@ -1,0 +1,127 @@
+@import '../variables';
+
+.navigation {
+	min-height: 40px;
+	padding: 5px;
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+	background-color: $solid-white;
+
+	& > * {
+		width: 300px;
+		margin-top: 5px; 
+	}
+
+	nav {
+		height: 125px;
+	}
+}
+
+.navigation-group{
+	display: flex;
+	flex-flow: column;
+	justify-content: flex-start;
+	align-items: center;
+	font-size: 12px;
+
+	.icon {
+		transform: rotate(90deg);
+
+		&:hover {
+			fill: white;
+			cursor: pointer;
+		}
+	}
+
+	.asc, .desc {
+		height: 10px;
+		width: 10px;
+		margin-left: 5px;
+		margin-top: 2px;
+	}
+
+	.asc {
+		transform: rotate(270deg);
+	}
+}
+
+.navigation-link {
+	text-align: center;
+}
+
+.canBePicked {
+	color: $blue;
+
+	&:hover {
+		color: $wild-strawberry;
+		cursor: pointer;
+	}
+}
+
+.picked {
+	color: $wild-strawberry;
+}
+
+.navigation-sorting {
+	text-align: center;
+
+	li {
+		margin: 5px 0;
+	}
+
+	.canBePicked {
+		margin-left: 20px;
+	}
+
+	.canBePicked:not(.picked) {
+		margin-right: 20px;
+	}
+	
+	.asc, .desc {
+		height: 10px;
+		width: 10px;
+		margin-left: 5px;
+		margin-top: 2px;
+	}
+
+	.asc {
+		transform: rotate(270deg);
+	}
+}
+
+.navigation-filters {
+
+	.navigation-link {
+		margin: 3px 0;
+	}
+
+	.input-starred, .input-updated {
+		width: 50px;
+		border: 0;
+		border-radius: 5px;
+		text-align: center;
+		outline: none;
+		color: $wild-strawberry;
+	}
+
+	.input-updated {
+		width: 120px;
+		padding-left: 40px;
+	}
+
+	.input-language {
+		margin-left: 5px;
+		color: $wild-strawberry;
+	}
+}
+
+.navigation-back {
+	font-size: 18px;
+	background: none;
+	outline: none;	
+
+	&:hover {
+		color: $cornflower-blue;
+	}
+}

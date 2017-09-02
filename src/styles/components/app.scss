@@ -1,0 +1,9 @@
+@import '../variables';
+
+.app {
+	background-color: $wild-strawberry;
+	background-image: linear-gradient(
+		to top, $wild-strawberry, $malibu
+	);
+	color: white;
+}

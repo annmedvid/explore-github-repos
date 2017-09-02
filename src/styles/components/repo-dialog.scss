@@ -1,0 +1,106 @@
+@import '../variables';
+
+.repo {
+	width: 100vw;
+	height: 100vh;
+	min-width: 910px;
+	position: fixed;
+	top: 0;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: $solid-whiter;
+}
+
+.repo-dialog {
+	padding: 20px 40px;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 14px;
+	border-radius: 5px;
+	background-color: white;
+	color: $blue;
+
+	& a:hover {
+		color: darken($wild-strawberry, 20%);
+		cursor: pointer;
+	}
+
+	.repo-title { 
+		text-align: center;
+	}
+
+	.table {
+		width: 400px;
+    	border-collapse: collapse;
+    	text-align: left;
+    	color: $cornflower-blue;
+    	border: 1px solid lighten($malibu, 20%);
+	}
+
+	.table-title {
+		margin-top: 15px;
+		font-size: 18px;
+		font-weight: bold;
+		text-align: left;
+		color: darken($east-side, 10%);
+	}
+
+	.table-header {
+		border-bottom: 1px solid lighten($malibu, 20%);
+		text-align: center;
+    	background-color: darken($dev, 3%);
+	}
+
+	.table-data, .table-th {
+		padding: 5px;
+	}
+
+	.table-th {
+		width: 230px;
+		background-color: $dev;
+
+		& > a {
+			color: $cornflower-blue;
+
+			&:hover {
+				color: darken($wild-strawberry, 20%);
+				cursor: pointer;
+			}
+		}
+	}
+
+	.th-info {
+		width: auto;
+		border-left: 1px solid lighten($malibu, 20%);
+	}
+
+	.table-data {
+		text-align: center;
+		font-weight: bold;
+		color: $aqua;
+	}
+
+	.data-lang {
+		width: 90px;
+		text-align: right;
+	}
+
+	.scroll-thead{
+    	width: 100%;
+    	display: inline-table;
+	}
+
+	.scroll-tbody
+	{
+	    display: block;
+	    overflow: auto;
+	}
+
+	.table-body{
+	    max-height: 100px;
+	}
+}

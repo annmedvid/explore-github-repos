@@ -1,0 +1,105 @@
+@import '../variables';
+
+.home-page {
+	display: flex;
+	flex-flow: column;
+	align-items: stretch;
+}
+
+.home-page_content {
+	height: 100%;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.home-page_explore {
+	font-size: 24px;
+	text-align: center;
+	text-transform: capitalize;
+
+	.github {
+		font-size: 30px;
+		color: $aqua;
+	}
+}
+
+.home-page_warning {
+	height: 30px;
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	color: $aqua;
+}
+
+.home-page_form {
+	height: 100px;
+	width: 250px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	background-color: $solid-white;
+	border-radius: 5px;
+}
+
+.home-page_owner {
+	width: 210px;
+	padding: 5px;
+	border: 0;
+	border-bottom: 1px solid $solid-whiter;
+	font-size: 14px;
+	background-color: transparent;
+	outline: none;
+
+	&::placeholder {
+		color: $solid-whiter;
+	}
+
+	&:focus {
+		border-bottom: 1px solid $aqua;
+	}
+
+	&:-webkit-autofill, &:-webkit-autofill:hover {
+		border-bottom: 1px solid $solid-whiter;
+    }
+
+    &:-webkit-autofill:focus {
+		border-bottom: 1px solid $aqua;
+    }
+}
+
+
+.home-page_search {
+	height: 35px;
+	width: 150px;
+	border-radius: 5px;
+	font-weight: 900;
+	color: $east-side;
+	background-color: white;
+
+	&:hover {
+		color: white;
+		background-color: $solid-whiter;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.home-page_look-around {
+	margin-top: 20px;
+	font-size: 14px;
+	text-align: center;
+
+	a {
+		color: $aqua;
+
+		&:hover {
+			color: white;
+		}
+	}
+}

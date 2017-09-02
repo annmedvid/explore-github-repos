@@ -1,0 +1,26 @@
+@import '../variables';
+
+.btn-cover {
+	text-align: center;
+}
+
+.btn {
+	height: 20px;
+	width: 70px;
+	padding-left: 25px;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: left;
+	border-radius: 10px;
+	background-color: white;
+	color: $robins-blue;
+
+	&:hover {
+		color: white;
+		background-color: $solid-whiter;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}

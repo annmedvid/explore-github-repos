@@ -1,0 +1,45 @@
+@import '../variables';
+
+.owner-info {
+	max-height: 150px;
+	min-width: 350px;
+	max-width: 800px;;
+	margin: 15px 0;
+	padding: 5px;
+	align-self: center;
+	display: flex;
+	border-radius: 3px;
+	background-color: $solid-white;
+}
+
+.owner-avatar {
+	width: 100px;
+	align-self: center;
+}
+
+.owner-main-info {
+	margin: 0 20px;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.owner-login {
+	font-size: 24px;
+	font-weight: bold;
+	color: $blue;
+}
+
+.owner-email {
+	color: $aqua;
+}
+
+.owner-location {
+	font-size: 14px;
+	color: $solid-whiter;
+}
+
+.owner-bio {
+	font-size: 14px;
+}

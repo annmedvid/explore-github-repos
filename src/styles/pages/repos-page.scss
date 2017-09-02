@@ -1,0 +1,103 @@
+@import '../variables';
+
+.repos-page {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.repos-page_content {
+	width: 100%;
+	flex: 1;
+	display: flex;
+	flex-flow: column;
+	justify-content: flex-start;
+	align-items: stretch;
+}
+
+.info, .loading {
+	font-size: 20px;
+
+	.back {
+		font-size: 16px;
+		color: $cornflower-blue;
+		background: none;
+		outline: none;	
+
+		&:hover {
+			color: white;
+		}
+	}
+}
+
+.repos_list {
+	padding: 10px;
+	padding-bottom: 0;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-content: stretch;
+}
+
+.repos_item {
+	height: 130px;
+	width: 300px;
+	margin: 5px;
+	padding: 5px;
+	border: 1px solid $solid-white;
+	border-radius: 3px;
+	background-color: $solid-white;
+
+	&:hover {
+		border: 1px solid $aqua;
+		cursor: pointer;
+	}
+
+	.item_name {
+		max-width: 290px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.item_stars {
+
+	}
+
+	.item_lang {
+		font-size: 14px;
+		font-weight: bold;
+		color: $cornflower-blue;
+	}
+
+	.item_updated {
+		font-size: 14px;
+		color: $solid-whiter;
+	}
+
+	.item_description {
+		max-width: 290px;
+		margin-top: 10px;
+		font-size: 14px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}
+
+.tooltip {
+	max-width: 250px;
+}
+
+.repos_show {
+	margin: 5px;
+	align-self: center;
+	font-size: 16px;
+	color: $aqua;
+	cursor: pointer;
+
+	&:hover {
+		color: white;
+	}
+}
