@@ -2,8 +2,10 @@
     "name": "explore-github-repos",
     "version": "0.1.0",
     "private": true,
+    "homepage": "https://annmedvid.github.io/explore-github-repos",
     "dependencies": {
         "axios": "^0.16.2",
+        "gh-pages": "^1.0.0",
         "lodash": "^4.17.4",
         "react": "^15.6.1",
         "react-dom": "^15.6.1",
@@ -21,6 +23,8 @@
         "custom-react-scripts": "0.0.23"
     },
     "scripts": {
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test --env=jsdom",
