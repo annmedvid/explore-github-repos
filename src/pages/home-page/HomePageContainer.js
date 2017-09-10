@@ -5,6 +5,7 @@ import {getOwnerRepos} from '../../reducers-and-actions/ownerReposActions'
 import injectState from '../../utils/decorators/injectState'
 
 import HomePage from './HomePage'
+import Loader from '../../components/common/Loader'
 
 const mapStateToProps = (store) => {
     return {
@@ -54,7 +55,7 @@ class HomePageContainer extends Component {
 	@injectState
   	render({isFetching, showWarning}) {
         if (isFetching) {
-            return <div className="loading"><p>Loading...</p></div>
+            return <Loader />
         }
 
     	return <div className="home-page">

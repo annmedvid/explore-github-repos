@@ -5,6 +5,7 @@ import injectPropsAndState from '../../utils/decorators/injectPropsAndState'
 import {getNextRepos, getOwnerRepo} from '../../reducers-and-actions/ownerReposActions'
 
 import ReposPage from './ReposPage'
+import Loader from '../../components/common/Loader'
 import RepoDialog from '../../components/RepoDialog/RepoDialog'
 
 const mapStateToProps = (store) => {
@@ -68,7 +69,7 @@ class ReposPageContainer extends Component {
 	render({isFetching, ownerInfo, repos, links, currentRepo}, {showRepoDialog, sorting, filters}) {
 		if (isFetching) {
 			return <div className="repos-page">
-				<p className="loading">Loading...</p>
+				<Loader />
 			</div>
 		}
 

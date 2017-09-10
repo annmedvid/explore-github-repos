@@ -1,0 +1,32 @@
+@import '../variables';
+
+.loader {
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+}
+
+.loader-item {
+ 	width: 10px;
+  	height: 10px;
+  	margin: 5px;
+  	border-radius: 50%;
+  	background: white;
+  	transform: scale(0);
+  	animation: stretch 1s;
+  	animation-iteration-count: infinite;
+}
+
+.loader-item:nth-child(2n) {
+  	animation-delay: 0.5s;
+}
+
+@keyframes stretch {
+	50% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
