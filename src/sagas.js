@@ -41,6 +41,8 @@ function* fetchOwnerRepos(action) {
 
         const reposInfo = userRepos || orgRepos
 
+        console.log(reposInfo)
+
         if (reposInfo) {
             yield put(getOwnerReposSuccess({reposInfo, ownerInfo}))
         } else {

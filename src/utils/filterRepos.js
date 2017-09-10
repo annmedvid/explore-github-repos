@@ -14,7 +14,7 @@ const filterMap = {
         return _.filter(repos, repo => repo[params[key]] > 0)
     },
     hasTopics: (repos, value, key) => {
-        return _.filter(repos, repo => repo[params[key]])
+        return _.filter(repos, repo => repo[params[key]].length)
     },
     hasStars: (repos, value, key) => {
         return _.filter(repos, repo => repo[params[key]] >= value)

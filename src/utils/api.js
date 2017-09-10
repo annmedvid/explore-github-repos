@@ -2,6 +2,8 @@ import axios from 'axios'
 
 import { USERS_URL, ORGS_URL, REPOS_URL } from '../constants/url'
 
+axios.defaults.headers.common['Accept'] = 'application/vnd.github.mercy-preview+json'
+
 export function receiveUserRepos({owner: username}) {
 	return axios.get(`${USERS_URL}/${username}/repos`)
 		.then(response => ({repos: response.data, links: response.headers.link || null}))
