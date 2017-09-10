@@ -38,11 +38,6 @@ class ReposPage extends React.PureComponent {
 
 	@injectPropsAndState
 	render({ownerInfo, repos, links, currentRepo, sorting, filters, selectMoreRepos, setSortParam, setFilterParam, selectRepo}, {showTip}) {
-		const languageList = _.chain(repos)
-			.map(repo => repo.language)
-			.uniq()
-			.value()
-
 		if (!repos.length) {
 			return <div className="info">
 				<p>Sorry, no repos.</p>
@@ -61,7 +56,9 @@ class ReposPage extends React.PureComponent {
 			repos = sortRepos(repos, sorting)
 		}
 
-		let reposList = repos.map(repo => <ReposItem repo={repo} key={repo.id} selectRepo={selectRepo} />)
+		const languageList = _.chain(repos).map(repo => repo.language).uniq().value()
+
+		const reposList = repos.map(repo => <ReposItem repo={repo} key={repo.id} selectRepo={selectRepo} />)
 
 		return <div className="repos-page_content">
 			<OwnerInfo info={ownerInfo} />
